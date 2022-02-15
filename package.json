@@ -1,0 +1,32 @@
+{
+  "name": "evernote.com",
+  "version": "1.0.0",
+  "description": "Demo automation framework using cypress and cucumber js",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "runOnChrome": "cypress run --browser chrome"
+  },
+  "keywords": [
+    "cucumber",
+    "cypress",
+    "javascript",
+    "gherkin"
+  ],
+  "author": "joan esquivel",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.4.1",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

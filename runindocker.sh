@@ -1,0 +1,1 @@
+docker run -it -v "%cd":/e2e -w /e2e cypress/included:8.2.0 --spec cypress/integraton/*.feature --browser chrome
