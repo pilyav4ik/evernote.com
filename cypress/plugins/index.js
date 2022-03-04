@@ -11,8 +11,11 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-const cucumber = require('cypress-cucumber-preprocessor').default
+const cucumber = require('cypress-cucumber-preprocessor').default;
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = (on, config) => {
-    on('file:preprocessor', cucumber())
-}
+    on('file:preprocessor', cucumber());
+    allureWriter(on, config);
+    return config;
+};
